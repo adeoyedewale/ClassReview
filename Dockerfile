@@ -30,8 +30,8 @@ COPY . .
 EXPOSE 8080
 
 # Start the application
-CMD ["npm", "ci" ]
-CMD [ "npm", "start" ]
+#CMD ["npm", "ci" ]
+#CMD [ "npm", "start" ]
 
 #set the working directory 
 WORKDIR /usr/src/frontend
@@ -52,6 +52,6 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "ci"]
-CMD [ "npm", "start" ]
+#CMD ["npm", "ci"]
+#CMD [ "npm", "start" ]
 CMD ["/usr/bin/supervisord"]
