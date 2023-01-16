@@ -1,5 +1,8 @@
 FROM node:14
 
+RUN apt-get update && apt-get install -y supervisor
+COPY supervisord.conf /etc/supervisor/conf.d/
+
 # Create a directory for the app
 RUN mkdir -p /usr/src/backend
 RUN mkdir -p /usr/src/frontend
@@ -51,3 +54,4 @@ EXPOSE 3000
 # Start the application
 CMD ["npm", "ci"]
 CMD [ "npm", "start" ]
+CMD ["/usr/bin/supervisord"]
