@@ -5,7 +5,7 @@ RUN mkdir -p /usr/src/backend
 RUN mkdir -p /usr/src/frontend
 
 # Copy the source code of the app
-COPY backendend /usr/src/backend
+COPY backend /usr/src/backend
 COPY frontend /usr/src/frontend
 
 # Set the working directory
