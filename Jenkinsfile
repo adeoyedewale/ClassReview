@@ -1,6 +1,9 @@
 pipeline {
 	agent any
      //create dockerhub credential in github with your dockerhub Username and Password/Token
+	tools {
+        NodeJS 'mynodejs' 
+    }
     environment {
       DOCKERHUB_CREDENTIALS=credentials('dockerhub')
     }
